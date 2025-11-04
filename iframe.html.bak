@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pete Zah | Iframe</title>
+    <title>Retro Bowl 45 | Iframe</title>
     <link rel="icon" type="image/x-icon" href="/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/storage/css/styles.css">
@@ -24,7 +24,7 @@
         <div class="navbar-left">
             <a href="/">
                 <img src="/logo.png" class="logo">
-                <p class="nav-text">Pete Zah</p>
+                <p class="nav-text">Retro Bowl 45</p>
             </a>
         </div>
         <div class="navbar-right">
@@ -72,8 +72,17 @@
         
     </div>
     <div class="footerBottom">
-        <p>Copyright &copy;2024; Designed by <span class="designer">Pete Zah</span></p>  <br>
+        <p>Copyright &copy;2024; Designed by <span class="designer">Retro Bowl 45</span></p>  <br>
         </div>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DL28VT81HX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DL28VT81HX');
+</script>
 </footer>
 </body>
 </html>
