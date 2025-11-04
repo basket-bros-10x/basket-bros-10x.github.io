@@ -1,7 +1,8 @@
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Retro Bowl 45 | Partners</title>
+    <title>Retro Bowl 45 | Alt Links</title>
     <link rel="icon" type="image/x-icon" href="/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/storage/css/styles.css">
@@ -21,7 +22,7 @@
     <div class="navbar">
         <div class="navbar-left">
             <a href="/">
-                <img src="logo.png" class="logo">
+                <img src="/logo.png" class="logo">
                 <p class="nav-text">Retro Bowl 45</p>
             </a><div class="navbar-right">
             <a href="/" class="nav-button"><i class="fas fa-gamepad"></i></a>
@@ -33,19 +34,8 @@
         </div>
     </div>
 
-    <h1 style="margin-top: 100px">Partners</h1>
-    <p>partner requests are currently only being accepted through <a style="color: #0000ff;" href="/partners.html">DISCORD</a></p>
-  <br>
-  <div class="container" id="imageContainer">
-      
-        <div class="image-item">
-            <a href="https://brunys.site">
-                <img src="/storage/images/partners/bruny.gif">
-            </a>
-        </div>
-
-       
-  </div>
+    <h1 style="margin-top: 100px">Alt Links</h1> <br> <br>
+    <p>Our three official links are petezahindustries.github.io, petezhagames.github.io, and petezahgames.com!</p>
 
     <script src="/storage/js/script.js"></script>
     <script src="/storage/js/cloak.js"></script>
@@ -56,25 +46,27 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
     <footer>
     <div class="footerContainer">
-        <div class="socialIcons">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/PeteZahGames"><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-google-plus"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a><div class="footerNav">
+
+        <div class="footerNav">
             <ul><li><a href="/index.html">Home</a></li>
-                
-                
+                <li><a href="/blogs/news">News</a></li>
+                <li><a href="/blogs/blog1">About</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                
+                <li><a href="/partners.html">Our Team</a></li>
                 <li><a href="legal.html">Privacy</a></li>
             </ul>
     </div>
     <div class="footerBottom">
-        <p>Copyright &copy;2024; Designed by <span class="designer">Retro Bowl 45</span></p></div>
+        <p>Copyright &copy;2024; Designed by <span class="designer">Retro Bowl 45</span></p>  <br>
+        </div>
 </footer>
 </body>
 </html>
