@@ -1,0 +1,83 @@
+
+<html>
+<head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TFZ72L5FPQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TFZ72L5FPQ');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brucite</title>
+    <link rel="stylesheet" href="/storage/css/evenmorestyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <h1 style="margin: 0; padding-top: 40px;">Brucite</h1>
+    <p id="dynamicParagraph">gyatt</p>
+
+    <div id="search-container">
+        <form id="uv-form">
+            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
+            <input id="uv-address" type="text" class="search-bar-home" placeholder="Start by inputting a link or searching with UV..." />
+            <button class="search-button" onclick="submitSearch()">SEARCH <i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+         
+        <div class="desc left-margin">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+        <a href="/static/embed.html#https://tiktok.com" style="display: inline-block;">
+            <img src="/storage/load/tiktok/IMG_5335.png" style="width: 30px; height: 30px; border-radius: 50%; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/static/embed.html#https://twitch.tv" style="display: inline-block;">
+            <img src="/storage/load/twitch/IMG_5336.png" style="width: 30px; height: 30px; border-radius: 50%; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/static/embed.html#https://google.com" style="display: inline-block;">
+            <img src="/storage/load/google/IMG_5324.webp" style="width: 30px; height: 30px; border-radius: 50%; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/static/embed.html#https://now.gg" style="display: inline-block;">
+            <img src="/storage/load/nowgg/IMG_5325.png" style="width: 30px; height: 30px; border-radius: 50%; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+    </div>
+    
+
+    <script src="/static/uv/uv.bundle.js" defer></script>
+    <script src="/static/uv/uv.config.js" defer></script>
+    <script src="/static/register-sw.js" defer></script>
+    <script src="/static/search.js" defer></script>
+    <script src="/static/index.js" defer></script>
+
+    <script>
+        const phrases = [
+            "Pete Zah best unblocked games ever!",
+            "https://petezahgames.com",
+            "Made by Pete Zah",
+            "Also try Jade Proxy!",
+            "still active despite being inactive for months ¯\\_(ツ)_/¯",
+            "Roblox should now work my eskibidi sigmets",
+            "IVE EDGED TO Pete Zah -idkiguess",
+            "iris has voice revealed once -iris"
+        ];
+
+        const paragraph = document.getElementById('dynamicParagraph');
+
+        function changeText() {
+            const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+            paragraph.textContent = randomPhrase;
+        }
+
+        paragraph.addEventListener('click', changeText);
+        window.onload = changeText;
+    </script>
+
+</body>
+</html>
