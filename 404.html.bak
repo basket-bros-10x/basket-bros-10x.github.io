@@ -28,15 +28,7 @@
             border-radius: 5px;
         }
     </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DL28VT81HX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-DL28VT81HX');
-</script>
     <div class="container">
                 <h1>4041!1!1!</h1>
                 <p>You're most likely here because of the proxy so click below to fix it.</p>
