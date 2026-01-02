@@ -48,8 +48,6 @@
     </div>
 
 
-    <h6 style="opacity: 0.5;">BUY YOUR OWN AD BY CLICKING <a style="color: #0000ff;" href="https://docs.google.com/forms/d/e/1FAIpQLSfNGszC5NO2zEov4VtxJkaXuJowzflG13AIGOzl2wHZwRwvrw/viewform?usp=sf_link">HERE</a></h6>
-
     <script src="/storage/js/iframe.js"></script>
     <script src="/storage/js/script.js"></script>
     <script src="/storage/js/cloak.js"></script>
@@ -57,21 +55,16 @@
     <script src="/storage/js/settings.js"></script>
 
     <footer>
-    <div class="footerContainer">
 
-        <div class="footerNav">
-            <ul><li><a href="/index.html">Home</a></li>
+    <div class="footerBottom">
+        <p>Copyright 2025; Designed by <span class="designer">retro-bowl-45.github.io</span></p>  <br>
+        </div>
+		 <ul><li><a href="/index.html">Home</a></li>
 
                 <li><a href="contact.html">Contact Us</a></li>
                 
                 <li><a href="legal.html">Privacy</a></li>
             </ul>
-        </div>
-        
-    </div>
-    <div class="footerBottom">
-        <p>Copyright 2025; Designed by <span class="designer">retro-bowl-45.github.io</span></p>  <br>
-        </div>
 </footer>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-83FJS6KYFQ"></script>
