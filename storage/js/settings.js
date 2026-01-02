@@ -31,23 +31,15 @@ function showCustomThemeSettings() {
 
 function populateCustomThemeSettings() {
     const customTheme = JSON.parse(localStorage.getItem('customTheme')) || {};
-    const defaults = {
-        'background-image': 'https://raw.githubusercontent.com/a456pur/seraph/main/images/backgrounds/seraph/homebg.png',
-        'font-family': 'Ubuntu',
-        'text-color': '#FFFFFF',
-        'background-color': 'black',
-        'border-color1': '#000000',
-        'border-color2': '#FFFFFF',
-        'hover-color': '#1a1818',
-        'text-glow': '#000000'
-    };
-
-    Object.keys(defaults).forEach((key) => {
-        const el = document.getElementById(key);
-        if (el) el.value = customTheme[key] || defaults[key];
-    });
+    document.getElementById('background-image').value = customTheme['background-image'] || 'https://raw.githubusercontent.com/a456pur/seraph/main/images/backgrounds/seraph/homebg.png';
+    document.getElementById('font-family').value = customTheme['font-family'] || 'Ubuntu';
+    document.getElementById('text-color').value = customTheme['text-color'] || '#FFFFFF';
+    document.getElementById('background-color').value = customTheme['background-color'] || 'black';
+    document.getElementById('border-color1').value = customTheme['border-color1'] || '#000000';
+    document.getElementById('border-color2').value = customTheme['border-color2'] || '#FFFFFF';
+    document.getElementById('hover-color').value = customTheme['hover-color'] || '#1a1818';
+    document.getElementById('text-glow').value = customTheme['text-glow'] || '#000000';
 }
-
 
 function applyCustomThemeStyles() {
     const customTheme = JSON.parse(localStorage.getItem('customTheme')) || {};
@@ -186,11 +178,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const resetButton = document.getElementById("resetButton");
     const successMessage = document.getElementById("success");
 
-    // Only run on pages that include the cloak controls
-    if (!presetSelect || !saveButton || !resetButton || !successMessage) return;
-
     const selectedPreset = getCookie("tabCloakPreset");
-    if (selectedPreset) presetSelect.value = selectedPreset;
+    if (selectedPreset) {
+        presetSelect.value = selectedPreset;
+    }
 
     saveButton.addEventListener("click", function() {
         const selectedValue = presetSelect.value;
@@ -198,7 +189,9 @@ document.addEventListener("DOMContentLoaded", function() {
         setCookie("tabCloakPreset", selectedValue, { expires: 365 });
 
         successMessage.style.display = "block";
-        setTimeout(function() { window.location.reload(); }, 1000);
+        setTimeout(function() {
+            window.location.reload();
+        }, 1000);
     });
 
     resetButton.addEventListener("click", function() {
@@ -206,7 +199,9 @@ document.addEventListener("DOMContentLoaded", function() {
         presetSelect.selectedIndex = 0;
         successMessage.textContent = "cloak removed, refreshing page...";
         successMessage.style.display = "block";
-        setTimeout(function() { window.location.reload(); }, 1000);
+        setTimeout(function() {
+            window.location.reload()
+        }, 1000);
     });
 
     function deleteCookie(name) {
@@ -219,17 +214,13 @@ document.addEventListener("DOMContentLoaded", function() {
 const panicSuccessMessage = document.getElementById("success-panic");
 let keyCombo = new Set();
 
-const panicKeyEl = document.getElementById('panicKey');
-if (panicKeyEl) {
-    panicKeyEl.addEventListener('focus', function() {
-        keyCombo.clear();
-        this.value = '';
-    });
-}
+(document.getElementById('panicKey')||null)?.addEventListener('focus', function() {
+    keyCombo.clear();
+    this.value = '';
+});
 
 document.addEventListener('keydown', function(event) {
     const panicKeyInput = document.getElementById('panicKey');
-    if (!panicKeyInput) return;
     if (document.activeElement === panicKeyInput) {
         event.preventDefault();
         keyCombo.add(event.key);
@@ -239,7 +230,6 @@ document.addEventListener('keydown', function(event) {
 
 document.addEventListener('keyup', function(event) {
     const panicKeyInput = document.getElementById('panicKey');
-    if (!panicKeyInput) return;
     if (document.activeElement === panicKeyInput) {
         keyCombo.delete(event.key);
     }
@@ -252,10 +242,8 @@ function saveSettings() {
     localStorage.setItem('panicKey', panicKey);
     localStorage.setItem('panicUrl', panicUrl);
     
-    if (panicSuccessMessage) {
-        panicSuccessMessage.textContent = "panic mode settings saved, refreshing page";
-        panicSuccessMessage.style.display = "block";
-    }
+    panicSuccessMessage.textContent = "panic mode settings saved, refreshing page";
+    panicSuccessMessage.style.display = "block";
     setTimeout(function() {
         window.location.reload();
     }, 1000);
@@ -311,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // export/import custom themes
-document.getElementById('export-theme').addEventListener('click', function() {
+(document.getElementById('export-theme')||null)?.addEventListener('click', function() {
     const blackout = document.createElement('div');
     blackout.id = 'blackout';
     const themePrompt = document.createElement('div');
@@ -336,7 +324,7 @@ document.getElementById('export-theme').addEventListener('click', function() {
     document.getElementById('blackout').style.display = 'block';
     document.getElementById('theme-prompt').style.display = 'block';
 
-    document.getElementById('save-theme').addEventListener('click', function() {
+    (document.getElementById('save-theme')||null)?.addEventListener('click', function() {
         let themeName = document.getElementById('theme-name').value;
         if (!themeName) {
             themeName = 'customtheme'
@@ -369,7 +357,7 @@ document.getElementById('export-theme').addEventListener('click', function() {
         document.body.removeChild(themePrompt);
     });
 
-    document.getElementById('cancel-export-theme').addEventListener('click', function() {
+    (document.getElementById('cancel-export-theme')||null)?.addEventListener('click', function() {
         document.getElementById('blackout').style.display = 'none';
         document.getElementById('theme-prompt').style.display = 'none';
         document.body.removeChild(blackout);
@@ -377,7 +365,7 @@ document.getElementById('export-theme').addEventListener('click', function() {
     });
 });
 
-document.getElementById('import-theme').addEventListener('click', function() {
+(document.getElementById('import-theme')||null)?.addEventListener('click', function() {
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = '.theme';
