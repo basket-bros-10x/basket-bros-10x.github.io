@@ -30,15 +30,30 @@ function showCustomThemeSettings() {
 }
 
 function populateCustomThemeSettings() {
+    // This settings bundle is reused across multiple pages.
+    // Only run theme form population if the theme inputs exist on the current page.
+    const bgInput = document.getElementById('background-image');
+    const fontInput = document.getElementById('font-family');
+    const textColorInput = document.getElementById('text-color');
+    const bgColorInput = document.getElementById('background-color');
+    const b1Input = document.getElementById('border-color1');
+    const b2Input = document.getElementById('border-color2');
+    const hoverInput = document.getElementById('hover-color');
+    const glowInput = document.getElementById('text-glow');
+
+    if (!bgInput || !fontInput || !textColorInput || !bgColorInput || !b1Input || !b2Input || !hoverInput || !glowInput) {
+        return;
+    }
+
     const customTheme = JSON.parse(localStorage.getItem('customTheme')) || {};
-    document.getElementById('background-image').value = customTheme['background-image'] || 'https://raw.githubusercontent.com/a456pur/seraph/main/images/backgrounds/seraph/homebg.png';
-    document.getElementById('font-family').value = customTheme['font-family'] || 'Ubuntu';
-    document.getElementById('text-color').value = customTheme['text-color'] || '#FFFFFF';
-    document.getElementById('background-color').value = customTheme['background-color'] || 'black';
-    document.getElementById('border-color1').value = customTheme['border-color1'] || '#000000';
-    document.getElementById('border-color2').value = customTheme['border-color2'] || '#FFFFFF';
-    document.getElementById('hover-color').value = customTheme['hover-color'] || '#1a1818';
-    document.getElementById('text-glow').value = customTheme['text-glow'] || '#000000';
+    bgInput.value = customTheme['background-image'] || 'https://raw.githubusercontent.com/a456pur/seraph/main/images/backgrounds/seraph/homebg.png';
+    fontInput.value = customTheme['font-family'] || 'Ubuntu';
+    textColorInput.value = customTheme['text-color'] || '#FFFFFF';
+    bgColorInput.value = customTheme['background-color'] || 'black';
+    b1Input.value = customTheme['border-color1'] || '#000000';
+    b2Input.value = customTheme['border-color2'] || '#FFFFFF';
+    hoverInput.value = customTheme['hover-color'] || '#1a1818';
+    glowInput.value = customTheme['text-glow'] || '#000000';
 }
 
 function applyCustomThemeStyles() {
