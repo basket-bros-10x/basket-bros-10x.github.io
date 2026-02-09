@@ -1,5 +1,11 @@
-ownerdomain=mains.io
-managerdomain=adinplay.com
+##################################
+# AdinPlay.com ads.txt - 2025-11-03
+##################################
+
+OWNERDOMAIN=agar.team
+MANAGERDOMAIN=adinplay.com
+adinplay.com, AGT, DIRECT
+
 # Google
 google.com, pub-3282547114800347, RESELLER, f08c47fec0942fa0
 
@@ -684,7 +690,11 @@ vidazoo.com, 655c85dc63ceeb606a0f365f, DIRECT, b6ada874b4d7d0b2
 smartadserver.com, 3490, DIRECT, 060d053dcf45cbf3
 gumgum.com, 13385, DIRECT, ffdef49475d318a9
 
-adinplay.com, MNS, DIRECT
-venatus.com, MNS, DIRECT
 
+venatus.com, AGT, DIRECT
+
+##################################
+# AdinPlay.com ads.txt - 2025-11-03
+##################################
+AÃ§Ä±klama
 Açıklama
