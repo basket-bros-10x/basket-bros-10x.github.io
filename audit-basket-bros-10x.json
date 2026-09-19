@@ -1,0 +1,11 @@
+{
+  "game_pages": 450,
+  "unique_titles": 450,
+  "unique_descriptions": 450,
+  "unique_articles": 450,
+  "titles_over_64": 0,
+  "missing_play_or_iframe": 0,
+  "long_sentences_repeated_3plus": 0,
+  "old_brand_refs": 0,
+  "old_domain_refs": 0
+}

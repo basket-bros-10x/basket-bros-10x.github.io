@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Action &amp; Adventure Unblocked Games</title><meta content="Play action and adventure unblocked games online. Browse shooters, platform games, survival adventures and more free browser games." name="description"/><link href="https://basket-bros-10x.github.io/action-games.html" rel="canonical"/><link href="assets/style.css" rel="stylesheet"/><link href="assets/nav.css" rel="stylesheet"/><link href="assets/pages.css" rel="stylesheet"/></head><body data-list="action"><div id="preroll"></div>
+<script>
+	function getScript(src) {
+    var headElm = document.head || document.getElementsByTagName('head')[0];
+    var script = document.createElement("script");
+    var once = true;
+    script.async = "async";
+    script.type = "text/javascript";
+    script.charset = "UTF-8";
+    script.src = src;
+    script.onload = script.onreadystatechange = function() {
+        if (once && (!script.readyState || /loaded|complete/.test(script.readyState))) {
+            once = false;         
+            script.onload = script.onreadystatechange = null;
+			console.log("okeey");
+        }
+    };
+	  headElm.appendChild(script);
+}
+
+ 
+	getScript("https://api.adinplay.com/libs/aiptag/pub/AGT/paperio.pro/tag.min.js");
+ 
+	window.aiptag = window.aiptag || {cmd: []};
+	aiptag.cmd.display = aiptag.cmd.display || [];
+	aiptag.cmd.player = aiptag.cmd.player || [];
+
+	//CMP tool settings
+	aiptag.cmp = {
+		show: true,
+		position: "centered",
+		button: true,
+		buttonText: "Privacy settings",
+		buttonPosition: "bottom-left"
+	}
+
+	aiptag.cmd.player.push(function() {
+		aiptag.adplayer = new aipPlayer({
+			AD_WIDTH: 960,
+			AD_HEIGHT: 540,
+			AD_DISPLAY: 'center',
+			LOADING_TEXT: 'loading advertisement',
+			PREROLL_ELEM: function(){return document.getElementById('preroll')},
+			AIP_COMPLETE: function (evt){ try{ if(window.__pr_cb){ window.__pr_cb(); } }catch(e){} finally{ window.__pr_cb=null; } },
+			AIP_REMOVE: function ()  {}
+		});
+	});
+
+	function show_preroll(callback) {
+		window.__pr_cb = (typeof callback === 'function') ? callback : null;
+		if (typeof aiptag.adplayer !== 'undefined') {
+			aiptag.cmd.player.push(function() { aiptag.adplayer.startPreRoll(); });
+		} else {
+			if (window.__pr_cb) { var cb = window.__pr_cb; window.__pr_cb = null; cb(); }
+		}
+	}
+</script><header class="site-header"><a class="brand" href="/"><img alt="Basket Bros 10x" src="assets/logo.svg"/><span>Basket Bros 10x</span></a><nav aria-label="Main navigation" class="main-nav"><a href="/">Home</a><a href="/#games">Games</a><a href="popular-games.html">Popular</a><a href="top-unblocked-games.html">Top Unblocked</a><a href="new-games.html">New</a><a href="favorite-games.html">Favorites</a><div class="nav-dropdown"><button type="button">Categories ▾</button><div class="dropdown-menu"><a href="action-games.html">Action &amp; Adventure</a><a href="strategy-games.html">Strategy &amp; Puzzle</a><a href="casual-games.html">Casual &amp; Idle</a><a href="driving-games.html">Driving &amp; Sports</a></div></div><div class="nav-dropdown"><button type="button">Information ▾</button><div class="dropdown-menu"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="dmca.html">DMCA</a></div></div></nav></header><main><section class="page-hero"><span class="kicker">Game category</span><h1>Action &amp; Adventure</h1><p>Fast battles, platform challenges, survival games and story-driven adventures ready to play in your browser.</p><label class="search"><span>⌕</span><input id="listingSearch" placeholder="Search action games…" type="search"/></label><div class="ad-slot-center category-ad-fixed">
+<div class="ad-placeholder" id="paperio-pro_970x250">
+<script type="text/javascript">
+      aiptag.cmd.display.push(function() { aipDisplayTag.display('paperio-pro_970x250'); });
+    </script>
+</div>
+</div></section><section class="listing-section"><div class="section-head"><h2>Action unblocked games</h2><span class="result-count" id="listingCount"></span></div><div class="game-grid" id="listingGrid"></div><div class="empty" hidden="" id="listingEmpty"><strong>Not Found!</strong></div><button class="load-more" id="listingMore">Load more games</button></section></main><footer><a class="brand" href="/"><img alt="" src="assets/logo.svg"/><span>Basket Bros 10x</span></a><div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="dmca.html">DMCA</a></div></footer><script defer="" src="assets/listing.js"></script></body></html>
